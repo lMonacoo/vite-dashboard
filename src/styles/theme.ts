@@ -1,15 +1,3 @@
-const breakpoints = {
-  mobile: 375,
-  desktop: 1440,
-};
-
-const fonts = {
-  weight: {
-    light: 400,
-    bold: 700,
-  },
-};
-
 const colors = {
   primary: {
     lineGreen: 'hsl(163, 72%, 41%)',
@@ -63,4 +51,28 @@ const lightColors = {
     instagramGradient: colors.primary.instagramGradient,
     youtube: colors.primary.darkRed,
   },
+};
+
+const breakpoints = {
+  mobile: 375,
+  desktop: 1440,
+};
+
+const fonts = {
+  weight: {
+    light: 400,
+    bold: 700,
+  },
+};
+
+export const darkTheme = {
+  breakpoints,
+  fonts,
+  colors: darkColors,
+};
+
+export const lightTheme = {
+  breakpoints,
+  fonts,
+  colors: lightColors,
 };
