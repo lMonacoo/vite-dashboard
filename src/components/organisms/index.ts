@@ -1,3 +1,4 @@
+import { BigCardContainer } from './BigCardContainer';
 import { Header } from './Header';
 
-export { Header };
+export { BigCardContainer, Header };

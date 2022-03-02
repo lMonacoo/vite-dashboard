@@ -4,10 +4,15 @@ import { PagesTitle, SwitchContainer } from '~/components/molecules';
 
 import * as s from './styles';
 
-export const Header: React.FunctionComponent = () => {
+interface HeaderProps {
+  totalFollowers: string;
+}
+
+export const Header: React.FunctionComponent<HeaderProps> = ({ totalFollowers }) => {
   return (
     <s.HeaderComponent>
-      <PagesTitle title='Social Media Dashboard' subtitle={`Total Followers: 23,004`} />
+      <PagesTitle title='Social Media Dashboard' subtitle={`Total Followers: ${totalFollowers}`} />
+      <s.Divisor />
       <SwitchContainer />
     </s.HeaderComponent>
   );

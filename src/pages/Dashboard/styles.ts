@@ -14,15 +14,6 @@ export const Container = styled.div`
 
 export const ContentContainer = styled.main`
   position: relative;
-  width: 80%;
+  width: 90%;
   max-width: ${(props) => props.theme.breakpoints.desktop}px;
-`;
-
-export const FollowersCardsContainer = styled.div`
-  position: relative;
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 1.75rem;
 `;

@@ -3,7 +3,7 @@ import React from 'react';
 import * as s from './styles';
 
 export interface SubtitleStylesProps {
-  color: 'text' | 'title';
+  color: 'text' | 'title' | 'positiveNumbers' | 'negativeNumbers';
   fontSize: 'subtitle';
   fontWeight: 'light' | 'bold';
 }

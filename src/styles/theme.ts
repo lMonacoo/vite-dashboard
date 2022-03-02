@@ -8,7 +8,7 @@ const colors = {
     brightRed: 'hsl(356, 69%, 56%)',
     darkBlue: 'hsl(208, 92%, 53%)',
     lightBlue: 'hsl(203, 89%, 53%)',
-    instagramGradient: 'linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)',
+    instagramGradient: 'linear-gradient(50deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
     darkRed: 'hsl(348, 97%, 39%)',
     veryDarkBluePrimary: 'hsl(230, 17%, 14%)',
     veryDarkBlueSecondary: 'hsl(232, 19%, 15%)',
@@ -34,7 +34,7 @@ const darkColors = {
     brands: {
       facebook: colors.primary.darkBlue,
       twitter: colors.primary.lightBlue,
-      instagramGradient: colors.primary.instagramGradient,
+      instagram: colors.primary.instagramGradient,
       youtube: colors.primary.darkRed,
     },
   },
@@ -53,7 +53,7 @@ const lightColors = {
     brands: {
       facebook: colors.primary.darkBlue,
       twitter: colors.primary.lightBlue,
-      instagramGradient: colors.primary.instagramGradient,
+      instagram: colors.primary.instagramGradient,
       youtube: colors.primary.darkRed,
     },
   },
@@ -62,12 +62,14 @@ const lightColors = {
 const breakpoints = {
   mobile: 375,
   desktop: 1440,
+  smallDesktop: 1220,
 };
 
 const fonts = {
   size: {
     subtitle: 0.9,
     h1: 1.75,
+    bigNumber: 3.7,
   },
   weight: {
     light: 400,
