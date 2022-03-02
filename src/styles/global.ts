@@ -9,6 +9,10 @@ export const GlobalStyle = createGlobalStyle`
     font-family: 'Nunito Sans', sans-serif;
     text-decoration: none;
     -webkit-tap-highlight-color: transparent;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    transition: 0.2s;
   }
 
   html {

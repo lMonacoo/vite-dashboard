@@ -13,15 +13,15 @@ export const SwitchContainer = styled.div`
 
   label {
     position: relative;
-    width: 100px;
-    height: 50px;
+    width: 50px;
+    height: 26px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     cursor: pointer;
-    background: grey;
+    background: ${(props) => props.theme.colors.dashboard.BgToggle};
     border-radius: 100px;
     transition: background-color 0.2s;
   }
@@ -29,23 +29,22 @@ export const SwitchContainer = styled.div`
   span {
     content: '';
     position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 45px;
-    height: 45px;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
 
-    border-radius: 45px;
-    background: #fff;
-    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+    border-radius: 20px;
+    background: ${(props) => props.theme.colors.dashboard.bgTop};
     transition: 0.2s;
   }
 
   label:active span {
-    width: 60px;
+    width: 25px;
   }
 
   input:checked + label span {
-    left: calc(100% - 2px);
+    left: calc(100% - 3px);
     transform: translateX(-100%);
   }
 `;

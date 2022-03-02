@@ -1,3 +1,7 @@
+export type ThemeColorsType = typeof lightColors;
+export type ThemeBreakpointsType = typeof breakpoints;
+export type ThemeFontsType = typeof fonts;
+
 const colors = {
   primary: {
     lineGreen: 'hsl(163, 72%, 41%)',
@@ -19,7 +23,7 @@ const colors = {
 
 const darkColors = {
   dashboard: {
-    toggle: 'linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)',
+    BgToggle: 'linear-gradient(70deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%))',
     positiveNumbers: colors.primary.lineGreen,
     negativeNumbers: colors.primary.brightRed,
     bg: colors.primary.veryDarkBluePrimary,
@@ -37,19 +41,21 @@ const darkColors = {
 };
 
 const lightColors = {
-  toggle: 'hsl(230, 22%, 74%) to hsl(230, 22%, 74%)',
-  positiveNumbers: colors.primary.lineGreen,
-  negativeNumbers: colors.primary.brightRed,
-  bg: colors.primary.white,
-  bgTop: colors.primary.veryPaleBlue,
-  cardBg: colors.primary.lightGrayishBlue,
-  title: colors.primary.veryDarkBluePrimary,
-  text: colors.primary.darkGrayishBlue,
-  brands: {
-    facebook: colors.primary.darkBlue,
-    twitter: colors.primary.lightBlue,
-    instagramGradient: colors.primary.instagramGradient,
-    youtube: colors.primary.darkRed,
+  dashboard: {
+    BgToggle: 'linear-gradient(70deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%))',
+    positiveNumbers: colors.primary.lineGreen,
+    negativeNumbers: colors.primary.brightRed,
+    bg: colors.primary.white,
+    bgTop: colors.primary.veryPaleBlue,
+    cardBg: colors.primary.lightGrayishBlue,
+    title: colors.primary.veryDarkBluePrimary,
+    text: colors.primary.darkGrayishBlue,
+    brands: {
+      facebook: colors.primary.darkBlue,
+      twitter: colors.primary.lightBlue,
+      instagramGradient: colors.primary.instagramGradient,
+      youtube: colors.primary.darkRed,
+    },
   },
 };
 
@@ -59,19 +65,29 @@ const breakpoints = {
 };
 
 const fonts = {
+  size: {
+    subtitle: 0.9,
+    h1: 1.75,
+  },
   weight: {
     light: 400,
     bold: 700,
   },
 };
 
-export const darkTheme = {
+export type ComposeTheme = {
+  breakpoints: ThemeBreakpointsType;
+  fonts: ThemeFontsType;
+  colors: ThemeColorsType;
+};
+
+export const darkTheme: ComposeTheme = {
   breakpoints,
   fonts,
   colors: darkColors,
 };
 
-export const lightTheme = {
+export const lightTheme: ComposeTheme = {
   breakpoints,
   fonts,
   colors: lightColors,

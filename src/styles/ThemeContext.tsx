@@ -7,8 +7,8 @@ import { darkTheme, lightTheme } from '~/styles/theme';
 const STORAGE_KEYWORD = '@Theme.settings';
 
 export enum ThemeOptions {
-  Dark = 'dark',
-  Light = 'light',
+  Dark = 'Dark',
+  Light = 'Light',
 }
 
 export type ThemeContextType = {
