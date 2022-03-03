@@ -2,24 +2,16 @@ import React from 'react';
 
 import { Icons } from '~/assets';
 import { Subtitle, Title } from '~/components/atoms';
-import { MediasKeys } from '~/components/molecules/SocialMediaCard';
+import { SocialMediaCardSmallDTO } from '~/components/molecules/SocialMediaCard/CardsDTO';
 
 import * as s from './styles';
 
-interface SocialMediaCardSmallProps {
-  formattedMainNumber: string;
-  subTitle: string;
-  type: MediasKeys;
-  statusNumber: number;
-  status: 'positive' | 'negative';
-}
-
-export const SocialMediaCardSmall: React.FunctionComponent<SocialMediaCardSmallProps> = ({
+export const SocialMediaCardSmall: React.FunctionComponent<SocialMediaCardSmallDTO> = ({
   formattedMainNumber,
   subTitle,
-  type,
   statusNumber,
   status,
+  type,
 }) => {
   return (
     <s.Container>

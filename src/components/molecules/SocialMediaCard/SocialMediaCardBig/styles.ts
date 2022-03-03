@@ -10,10 +10,14 @@ export const Container = styled.div`
   justify-content: center;
   gap: 2rem;
 
+  cursor: pointer;
   border-radius: 5px;
   overflow: hidden;
-
   background: ${(props) => props.theme.colors.dashboard.cardBg};
+
+  &:hover {
+    filter: ${(props) => `brightness(${props.theme.colors.dashboard.cardHoverBrightness})`};
+  }
 `;
 
 export const ContainerBorderTop = styled.div<{ borderColor: string }>`
@@ -22,7 +26,7 @@ export const ContainerBorderTop = styled.div<{ borderColor: string }>`
   left: 0;
   width: 100%;
   height: 100%;
-  border-top: 6px solid transparent;
+  border-top: 4px solid transparent;
   background: ${(props) => props.borderColor};
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;

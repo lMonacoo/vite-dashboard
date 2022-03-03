@@ -2,21 +2,11 @@ import React from 'react';
 
 import { Icons } from '~/assets';
 import { Subtitle, Title } from '~/components/atoms';
-import { MediasKeys } from '~/components/molecules/SocialMediaCard';
+import { SocialMediaCardBigDTO } from '~/components/molecules/SocialMediaCard/CardsDTO';
 
 import * as s from './styles';
 
-interface SocialMediaCardBigProps {
-  formattedMainNumber: string;
-  subTitle: string;
-  statusNumber: number;
-  status: 'positive' | 'negative';
-  type: MediasKeys;
-  description: string;
-  borderColor: string;
-}
-
-export const SocialMediaCardBig: React.FunctionComponent<SocialMediaCardBigProps> = ({
+export const SocialMediaCardBig: React.FunctionComponent<SocialMediaCardBigDTO> = ({
   formattedMainNumber,
   subTitle,
   statusNumber,

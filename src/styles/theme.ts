@@ -29,6 +29,7 @@ const darkColors = {
     bg: colors.primary.veryDarkBluePrimary,
     bgTop: colors.primary.veryDarkBlueSecondary,
     cardBg: colors.primary.darkUnsaturatedBlue,
+    cardHoverBrightness: 1.3,
     title: colors.primary.white,
     text: colors.primary.unsaturatedBlue,
     brands: {
@@ -48,6 +49,7 @@ const lightColors = {
     bg: colors.primary.white,
     bgTop: colors.primary.veryPaleBlue,
     cardBg: colors.primary.lightGrayishBlue,
+    cardHoverBrightness: 0.9,
     title: colors.primary.veryDarkBluePrimary,
     text: colors.primary.darkGrayishBlue,
     brands: {

@@ -1,21 +1,11 @@
 import React, { useCallback } from 'react';
 import { useTheme } from 'styled-components';
 
+import { SocialMediaCardAdapterDTO } from '~/components/molecules/SocialMediaCard/CardsDTO';
 import { SocialMediaCardBig } from '~/components/molecules/SocialMediaCard/SocialMediaCardBig';
 import { SocialMediaCardSmall } from '~/components/molecules/SocialMediaCard/SocialMediaCardSmall';
 
-export type MediasKeys = 'facebook' | 'twitter' | 'instagram' | 'youtube';
-
-interface SocialMediaCardProps {
-  size: 'big' | 'small';
-  socialMedia: MediasKeys;
-  formattedMainNumber: string;
-  subTitle: string;
-  statusNumber: number;
-  status: 'positive' | 'negative';
-}
-
-export const SocialMediaCardAdapter: React.FunctionComponent<SocialMediaCardProps> = ({
+export const SocialMediaCardAdapter: React.FunctionComponent<SocialMediaCardAdapterDTO> = ({
   size,
   socialMedia,
   formattedMainNumber,

@@ -5,15 +5,12 @@ import { IbigCardsMock, IsmallCardsMock } from '~/mock/dashboard';
 
 import * as s from './styles';
 
-interface TemplateDashboardProps {
+interface DashboardProps {
   summary: IbigCardsMock[];
   dailyOverview: IsmallCardsMock[];
 }
 
-export const TemplateDashboard: React.FunctionComponent<TemplateDashboardProps> = ({
-  summary,
-  dailyOverview,
-}) => {
+export const Dashboard: React.FunctionComponent<DashboardProps> = ({ summary, dailyOverview }) => {
   //
   const calculateTotalFollowers = () => {
     const totalNumber = summary.reduce((acc, card) => {
@@ -25,6 +22,7 @@ export const TemplateDashboard: React.FunctionComponent<TemplateDashboardProps> 
 
   return (
     <s.Container>
+      <s.BackgroundShape />
       <s.ContentContainer>
         <Header totalFollowers={calculateTotalFollowers()} />
         <BigCardContainer data={summary} />
