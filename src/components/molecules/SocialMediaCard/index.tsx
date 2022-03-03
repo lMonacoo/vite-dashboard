@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { useTheme } from 'styled-components';
 
 import { SocialMediaCardBig } from '~/components/molecules/SocialMediaCard/SocialMediaCardBig';
+import { SocialMediaCardSmall } from '~/components/molecules/SocialMediaCard/SocialMediaCardSmall';
 
 export type MediasKeys = 'facebook' | 'twitter' | 'instagram' | 'youtube';
 
@@ -43,7 +44,7 @@ export const SocialMediaCardAdapter: React.FunctionComponent<SocialMediaCardProp
 
   const returnCardSize = {
     big: <SocialMediaCardBig {...returnGenericsCardsProps()} {...returnBigCardsProps()} />,
-    small: <></>,
+    small: <SocialMediaCardSmall {...returnGenericsCardsProps()} />,
   };
 
   return returnCardSize[size];

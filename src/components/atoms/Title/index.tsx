@@ -3,7 +3,7 @@ import React from 'react';
 import * as s from './styles';
 
 export interface TitleStylesProps {
-  fontSize: 'h1' | 'bigNumber';
+  fontSize: 'h1' | 'h2' | 'bigNumber' | 'smallNumber';
 }
 
 interface TitleProps extends TitleStylesProps {

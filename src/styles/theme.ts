@@ -69,7 +69,9 @@ const fonts = {
   size: {
     subtitle: 0.9,
     h1: 1.75,
+    h2: 1.6,
     bigNumber: 3.7,
+    smallNumber: 2,
   },
   weight: {
     light: 400,

@@ -6,4 +6,5 @@ export const TitleText = styled.p<TitleStylesProps>`
   font-size: ${(props) => props.theme.fonts.size[props.fontSize]}rem;
   color: ${(props) => props.theme.colors.dashboard.title};
   font-weight: ${(props) => props.theme.fonts.weight.bold};
+  width: fit-content;
 `;
