@@ -1,10 +1,14 @@
+export type ThemeColorsType = typeof lightColors;
+export type ThemeBreakpointsType = typeof breakpoints;
+export type ThemeFontsType = typeof fonts;
+
 const colors = {
   primary: {
     lineGreen: 'hsl(163, 72%, 41%)',
     brightRed: 'hsl(356, 69%, 56%)',
     darkBlue: 'hsl(208, 92%, 53%)',
     lightBlue: 'hsl(203, 89%, 53%)',
-    instagramGradient: 'linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)',
+    instagramGradient: 'linear-gradient(50deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%))',
     darkRed: 'hsl(348, 97%, 39%)',
     veryDarkBluePrimary: 'hsl(230, 17%, 14%)',
     veryDarkBlueSecondary: 'hsl(232, 19%, 15%)',
@@ -19,59 +23,77 @@ const colors = {
 
 const darkColors = {
   dashboard: {
-    toggle: 'linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%)',
+    BgToggle: 'linear-gradient(70deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%))',
     positiveNumbers: colors.primary.lineGreen,
     negativeNumbers: colors.primary.brightRed,
     bg: colors.primary.veryDarkBluePrimary,
     bgTop: colors.primary.veryDarkBlueSecondary,
     cardBg: colors.primary.darkUnsaturatedBlue,
+    cardHoverBrightness: 1.3,
     title: colors.primary.white,
     text: colors.primary.unsaturatedBlue,
     brands: {
       facebook: colors.primary.darkBlue,
       twitter: colors.primary.lightBlue,
-      instagramGradient: colors.primary.instagramGradient,
+      instagram: colors.primary.instagramGradient,
       youtube: colors.primary.darkRed,
     },
   },
 };
 
 const lightColors = {
-  toggle: 'hsl(230, 22%, 74%) to hsl(230, 22%, 74%)',
-  positiveNumbers: colors.primary.lineGreen,
-  negativeNumbers: colors.primary.brightRed,
-  bg: colors.primary.white,
-  bgTop: colors.primary.veryPaleBlue,
-  cardBg: colors.primary.lightGrayishBlue,
-  title: colors.primary.veryDarkBluePrimary,
-  text: colors.primary.darkGrayishBlue,
-  brands: {
-    facebook: colors.primary.darkBlue,
-    twitter: colors.primary.lightBlue,
-    instagramGradient: colors.primary.instagramGradient,
-    youtube: colors.primary.darkRed,
+  dashboard: {
+    BgToggle: 'linear-gradient(70deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%))',
+    positiveNumbers: colors.primary.lineGreen,
+    negativeNumbers: colors.primary.brightRed,
+    bg: colors.primary.white,
+    bgTop: colors.primary.veryPaleBlue,
+    cardBg: colors.primary.lightGrayishBlue,
+    cardHoverBrightness: 0.9,
+    title: colors.primary.veryDarkBluePrimary,
+    text: colors.primary.darkGrayishBlue,
+    brands: {
+      facebook: colors.primary.darkBlue,
+      twitter: colors.primary.lightBlue,
+      instagram: colors.primary.instagramGradient,
+      youtube: colors.primary.darkRed,
+    },
   },
 };
 
 const breakpoints = {
   mobile: 375,
   desktop: 1440,
+  smallDesktop: 1220,
 };
 
 const fonts = {
+  size: {
+    subtitle: 0.9,
+    h1: 1.75,
+    h2: 1.6,
+    bigNumber: 3.7,
+    smallNumber: 2,
+  },
   weight: {
     light: 400,
     bold: 700,
   },
 };
 
-export const darkTheme = {
+export type ComposeTheme = {
+  breakpoints: ThemeBreakpointsType;
+  fonts: ThemeFontsType;
+  colors: ThemeColorsType;
+};
+
+export const darkTheme: ComposeTheme = {
   breakpoints,
   fonts,
   colors: darkColors,
 };
 
-export const lightTheme = {
+export const lightTheme: ComposeTheme = {
   breakpoints,
   fonts,
   colors: lightColors,

@@ -4,7 +4,7 @@ import * as s from './styles';
 
 interface SwitchProps {
   isChecked: boolean;
-  onChange: (event: React.FormEvent<HTMLInputElement>) => {};
+  onChange: (event: React.FormEvent<HTMLInputElement>) => void;
 }
 
 export const Switch: React.FunctionComponent<SwitchProps> = ({ isChecked, onChange }) => {
